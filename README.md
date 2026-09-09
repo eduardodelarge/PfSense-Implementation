@@ -55,7 +55,8 @@ A topologia utilizada foi composta por três redes distintas.
 
 ## Topologia
 
-> **Inserir imagem:** `images/topologia.png`
+<img width="790" height="361" alt="image" src="https://github.com/user-attachments/assets/6192d5fa-a90f-4205-be2f-f2ab35fdd22e" />
+
 
 ### Estrutura
 
