@@ -333,9 +333,6 @@ Também reforçou conceitos como:
 
 ---
 
-# 11. Próximos Passos
-
-O ambiente pode ser expandido para incluir funcionalidades comuns em redes corporativas.
 
 ## Melhorias planejadas
 
@@ -347,5 +344,3 @@ O ambiente pode ser expandido para incluir funcionalidades comuns em redes corpo
 - [ ] Integrar com Wazuh (SIEM).
 - [ ] Monitorar o ambiente utilizando Zabbix.
 - [ ] Criar dashboards no Grafana.
-
-Essas evoluções aproximam o laboratório de cenários reais encontrados em ambientes corporativos de infraestrutura e segurança da informação.
