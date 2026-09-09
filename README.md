@@ -1,10 +1,8 @@
 # Laboratório de Firewall e Segmentação de Rede com pfSense
 
-**Autor:** Eduardo Sousa
-
 ## Objetivo
 
-Construir um ambiente de laboratório utilizando VirtualBox para simular uma arquitetura de rede corporativa com firewall, segmentação de rede, NAT e gerenciamento isolado.
+Construir um ambiente de laboratório utilizando VMWare para simular uma arquitetura de rede corporativa com firewall, segmentação de rede, NAT e gerenciamento isolado.
 
 ---
 
@@ -81,17 +79,16 @@ O host comunica-se apenas com a interface de gerenciamento do firewall.
 
 | Componente | Versão |
 |------------|--------|
-| VirtualBox | *(preencher)* |
-| pfSense | *(preencher)* |
-| Ubuntu | *(preencher)* |
+| VMWare | *Workstation pro* |
+| pfSense | *1.2* |
+| Ubuntu | *24.04.4* |
 | Sistema Host | Windows |
 
 ## Recursos das Máquinas Virtuais
 
-| Máquina | CPU | RAM |
-|---------|-----|------|
-| pfSense | *(preencher)* | *(preencher)* |
-| Ubuntu | *(preencher)* | *(preencher)* |
+<img width="295" height="350" alt="image" src="https://github.com/user-attachments/assets/87e12fc9-1535-44ce-b3ae-2ece7fd6ddeb" /> <img width="290" height="351" alt="image" src="https://github.com/user-attachments/assets/b8caa924-7f36-4ae0-9099-8fa9414d51a4" />
+
+
 
 ---
 
@@ -115,8 +112,6 @@ Fluxo:
 Ubuntu → pfSense → NAT → Internet
 ```
 
-> **Inserir imagem:** `images/wan-nat.png`
-
 ---
 
 ## 5.2 LAN (LAN Segment)
@@ -133,16 +128,14 @@ O **LAN Segment** cria uma rede privada exclusiva entre as máquinas virtuais.
 
 | Dispositivo | IP |
 |-------------|------|
-| pfSense LAN | `192.168.10.1` |
-| Ubuntu | `192.168.10.x` |
+| pfSense LAN | `192.168.1.1` |
+| Ubuntu | `192.168.1.104` |
 
 Fluxo:
 
 ```text
 Ubuntu → LAN Segment → pfSense
 ```
-
-> **Inserir imagem:** `images/lan-segment.png`
 
 ---
 
@@ -156,16 +149,16 @@ Essa rede permite que o computador host acesse a interface web do pfSense sem fa
 
 | Dispositivo | IP |
 |-------------|------|
-| Host | `192.168.56.1` |
-| pfSense MGMT | `192.168.56.2` |
+| pfSense MGMT | `192.168.211.128` |
 
 A administração ocorre através do navegador.
 
 ```text
-https://192.168.56.2
+https://192.168.211.128
 ```
 
-> **Inserir imagem:** `images/host-only.png`
+<img width="514" height="157" alt="image" src="https://github.com/user-attachments/assets/f1c0ec7c-707a-43a6-a337-441e614d02f1" />
+
 
 ---
 
@@ -181,8 +174,6 @@ Após instalar o pfSense foram realizadas as seguintes configurações.
 | LAN | Rede Interna |
 | MGMT | Administração |
 
-> **Inserir imagem:** `images/interfaces-pfsense.png`
-
 ## Configuração da LAN
 
 - IP da LAN: `192.168.10.1`
@@ -195,7 +186,8 @@ Foram criadas regras permitindo:
 - acesso da LAN à Internet;
 - administração pela interface Host-Only.
 
-> **Inserir imagem:** `images/firewall-rules.png`
+<img width="1164" height="520" alt="image" src="https://github.com/user-attachments/assets/3be37d0c-4dc8-4b43-9109-713e00f456c1" />
+
 
 ---
 
@@ -218,7 +210,7 @@ ip route
 ## Testar comunicação com o gateway
 
 ```bash
-ping 192.168.10.1
+ping 192.168.1.1
 ```
 
 ## Testar acesso à Internet
