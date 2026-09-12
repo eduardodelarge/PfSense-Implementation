@@ -225,7 +225,8 @@ ping 8.8.8.8
 curl google.com
 ```
 
-> **Inserir imagem:** `images/ubuntu-terminal.png`
+<img width="783" height="624" alt="image" src="https://github.com/user-attachments/assets/5fe47254-bd54-422c-a191-c9efe329bafd" />
+
 
 ---
 
@@ -254,59 +255,8 @@ NAT
 Internet
 ```
 
-> **Inserir imagem:** `images/fluxo-pacotes.png`
 
----
-
-# 9. Testes Realizados
-
-## Teste 1 – Comunicação com o Gateway
-
-### Objetivo
-
-Validar a comunicação entre Ubuntu e pfSense.
-
-```bash
-ping 192.168.10.1
-```
-
-**Resultado esperado**
-
-- respostas ICMP recebidas.
-
-> **Inserir imagem:** `images/teste-ping-gateway.png`
-
----
-
-## Teste 2 – Acesso à Internet
-
-### Objetivo
-
-Validar o funcionamento do NAT.
-
-```bash
-ping 8.8.8.8
-```
-
-> **Inserir imagem:** `images/teste-internet.png`
-
----
-
-## Teste 3 – Resolução DNS
-
-### Objetivo
-
-Confirmar que a resolução de nomes está funcionando corretamente.
-
-```bash
-curl google.com
-```
-
-> **Inserir imagem:** `images/teste-dns.png`
-
----
-
-## Teste 4 – Regras de Firewall
+# 9. Teste de Regras de Firewall
 
 Foram realizados testes permitindo e bloqueando tráfego.
 
