@@ -187,6 +187,8 @@ Foram criadas regras permitindo:
 - administração pela interface Host-Only.
 
 <img width="1164" height="520" alt="image" src="https://github.com/user-attachments/assets/3be37d0c-4dc8-4b43-9109-713e00f456c1" />
+<img width="1161" height="372" alt="image" src="https://github.com/user-attachments/assets/c323779b-c071-4d06-bb0c-04885c264ce0" />
+
 
 
 ---
